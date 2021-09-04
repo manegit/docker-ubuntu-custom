@@ -6,14 +6,14 @@ alias lm='ls -l | less'
 
 alias py3="python3"
 alias q="exit"
-alias r='ranger'
+#alias cdd="cd /sdcard/Download"
 
 alias we='curl de.wttr.in/Berlin\?0nqF'
 alias we1='curl de.wttr.in/Berlin\?1nqF'
 alias we2='curl de.wttr.in/Berlin\?2nqF'
 alias weather='curl de.wttr.in/Berlin/\?nqF'
 
-alias update='sudo apt update && sudo apt upgrade -y'
+alias update='sudo apk update && sudo apk upgrade'
 
 #alias fd='fdfind'
 
