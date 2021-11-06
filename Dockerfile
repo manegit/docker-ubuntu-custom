@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install packages
 RUN apt update && apt install -y python3-pip mc ncdu aria2 htop fd-find nano busybox \
-git lynx jq bc dos2unix gawk sed p7zip gzip markdown neofetch \
+git git-lfs lynx jq bc dos2unix gawk sed p7zip gzip markdown neofetch \
 tmux curl cmatrix w3m bash figlet nmap sudo emacs gnupg \
 less at newsboat buku ddgr caca-utils && rm -rf /var/lib/apt/lists/*
 
