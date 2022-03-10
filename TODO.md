@@ -1,4 +1,5 @@
 # Todos
 
-* include usrhomedir
-
+- [ ] include usrhomedir
+- [ ] mat2 shred
+- [ ] 
