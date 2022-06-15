@@ -19,7 +19,7 @@ RUN pip3 install --no-cache-dir -r /usr/src/py3/requirements.txt
 
 RUN useradd -m -s /bin/bash -G sudo $USER && echo "$USER:$USER" | chpasswd
 
-COPY .alias .bashrc /home/$USER/
+COPY homedir.tar.gz /home/$USER/
 
 USER $USER
 WORKDIR /home/$USER
