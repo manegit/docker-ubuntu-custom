@@ -26,9 +26,14 @@ WORKDIR /home/$USER
 
 RUN gunzip homedir.tar.gz && tar -xvf homedir.tar . && \
 rm homedir.tar && \
-mkdir bin && \
-chmod u+x bin/* && \
-chown -R $USER:users .
+mkdir bin
+
+USER root
+
+RUN chown -R $USER:users .
+#chmod u+x bin/* && \
+
+USER $USER
 
 # run the applicationn
 CMD ["/bin/bash"]
