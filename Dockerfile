@@ -24,5 +24,11 @@ COPY .alias .bashrc /home/$USER/
 USER $USER
 WORKDIR /home/$USER
 
+RUN gunzip homedir.tar.gz && tar -xvf homedir.tar . && \
+rm homedir.tar && \
+mkdir bin && \
+chmod u+x bin/* && \
+chown -R $USER:users .
+
 # run the applicationn
 CMD ["/bin/bash"]
