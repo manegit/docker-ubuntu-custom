@@ -43,6 +43,7 @@ jobs:
           tar -zcvf ../homedir.tar .
           cd ..
           gzip homedir.tar
+          rm -r $HOME/.sigstore
 
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
