@@ -10,10 +10,10 @@ git git-lfs lynx jq bc dos2unix gawk sed p7zip gzip markdown neofetch \
 tmux curl cmatrix w3m bash figlet nmap sudo emacs gnupg mat2 secure-delete \
 less at newsboat buku ddgr caca-utils && rm -rf /var/lib/apt/lists/*
 
-# upgrade pip
+# Upgrade pip
 RUN pip3 install --upgrade pip
 
-# install Python modules
+# Install Python modules
 COPY requirements.txt /usr/src/py3/
 RUN pip3 install --no-cache-dir -r /usr/src/py3/requirements.txt
 
@@ -23,6 +23,11 @@ COPY homedir.tar.gz /home/$USER/
 
 USER $USER
 WORKDIR /home/$USER
+
+# Install oh-my-zsh
+RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
+cd .oh-my-zsh/custom/plugins && \
+git clone https://github.com/zsh-users/zsh-autosuggestions
 
 RUN gunzip homedir.tar.gz && tar -xvf homedir.tar . && \
 rm homedir.tar && \
