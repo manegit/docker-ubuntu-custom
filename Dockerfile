@@ -31,14 +31,18 @@ git clone https://github.com/zsh-users/zsh-autosuggestions
 
 RUN gunzip homedir.tar.gz && tar -xvf homedir.tar . && \
 rm homedir.tar && \
+cat .zshrc2 >> .zshrc && \
+rm .zshrc2 && \
+./update_zshrc.sh && \
+rm update_zshrc.sh && \
 mkdir bin
 
 USER root
 
 RUN chown -R $USER:users .
-#chmod u+x bin/* && \
+#chmod u+x bin/*
 
 USER $USER
 
 # run the applicationn
-CMD ["/bin/bash"]
+CMD ["/bin/zsh"]
