@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt update && apt install -y python3-pip mc ncdu aria2 htop fd-find nano busybox \
 git git-lfs lynx jq bc dos2unix gawk sed p7zip gzip markdown neofetch \
 tmux curl cmatrix w3m bash figlet nmap sudo emacs gnupg mat2 secure-delete \
-less at newsboat buku ddgr caca-utils && rm -rf /var/lib/apt/lists/*
+less at newsboat buku ddgr caca-utils zsh && rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip
 RUN pip3 install --upgrade pip
