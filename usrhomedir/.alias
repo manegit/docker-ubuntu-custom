@@ -22,7 +22,7 @@ alias update='sudo apt update && sudo apt upgrade -y'
 alias a2c='aria2c -c'
 
 alias git-add="git add ."                                                   
-alias git-commit='git commit -m "add"'
+alias git-commit='git commit -m "update"'
 
 function mdview
 {

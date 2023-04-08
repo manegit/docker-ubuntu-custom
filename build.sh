@@ -2,5 +2,4 @@ cd usrhomedir
 tar -zcvf ../homedir.tar .
 cd ..
 gzip homedir.tar
-
-docker build -t mane1docker/ubuntu-custom .
+docker build -t ghcr.io/manegit/docker-ubuntu-custom:latest .
