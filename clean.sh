@@ -1,2 +1,2 @@
 docker rm ubuntu-custom
-docker rmighcr.io/manegit/docker-ubuntu-custom:main
+docker rmi ghcr.io/manegit/docker-ubuntu-custom:main
