@@ -5,9 +5,10 @@ ENV USER=ubuntu
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install packages
-RUN apt update && apt install -y python3-pip mc ncdu aria2 htop fd-find nano busybox \
-git git-lfs lynx jq bc dos2unix gawk sed p7zip gzip markdown neofetch iputils-ping \
-tmux curl cmatrix w3m bash figlet nmap sudo emacs gnupg mat2 secure-delete \
+RUN apt update && apt install -y python3-pip mc ncdu aria2 htop fd-find nano \
+busybox git git-lfs lynx jq bc dos2unix gawk sed p7zip gzip markdown neofetch \
+iputils-ping tmux curl cmatrix w3m bash figlet nmap sudo emacs gnupg mat2 \
+secure-delete bsdmainutils \
 less at newsboat buku ddgr caca-utils zsh age vim && rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip
