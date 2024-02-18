@@ -47,7 +47,7 @@ jobs:
           
       - name: build homedir.tar.gz
         run: |
-          rm -r $HOME/.sigstore
+          # rm -r $HOME/.sigstore
           cd usrhomedir
           tar -zcvf ../homedir.tar .
           cd ..
